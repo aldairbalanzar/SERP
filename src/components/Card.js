@@ -2,8 +2,10 @@ import React from 'react'
 
 function Card({ video }) {
     const { clip } = video;
-    const { name, description, duration, pictures, user, stats } = clip;
-    
+    const { name, description, duration, pictures, user, stats, created_time } = clip;
+    let date = created_time.split('-')
+    console.log(date)
+
     return (
         <div className='card-container'>
             <div className="img-container">
@@ -17,7 +19,7 @@ function Card({ video }) {
             <h3 className="card-username">{user.name}</h3>
             <div className="card-stats-container">
                 <h4 className="card-data">{duration} min. | Views: {stats.plays ? stats.plays : 0}</h4>
-                <h4 className="card-data">heyy</h4>
+                <h4 className="card-data">Uploaded: {`${date[1]}/${date[0]}/${date[2].slice(0, 2)}`}</h4>
 
             </div>
         </div>
