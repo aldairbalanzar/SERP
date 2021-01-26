@@ -31,6 +31,7 @@ function SearchBar({ jsonData, search, setSearch, filteredData, handleSearchedDa
             value={search}
             placeholder={inputMessage}
             />
+            <button type='submit' className='submit-btn'>Submit</button>
             {filteredData.length > 0  &&
                 <h3 className="search-results-count">{`Results: ${filteredData.length}`}</h3>
             }
