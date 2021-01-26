@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import animations from './data/animation.json';
 import examples from './data/example.json';
 import travels from './data/travel.json';
-import Nav from './components/Nav'
+import Nav from './components/Nav';
 import SearchBar from './components/SearchBar';
 import CardList from './components/CardList';
 import Filters from './components/Filters';
@@ -15,7 +15,7 @@ function App() {
   const [jsonData, setJsonData] = useState([...animations.data, ...examples.data, ...travels.data]);
   const [search, setSearch] = useState('');
   const [currentSearch, setCurrentSearch] = useState('');
-  const [sort, setSort] = useState(0)
+  const [sort, setSort] = useState(0);
   const [filteredData, setFilteredData] = useState([]);
 
   // hanldes how videos are sorted, defaults to alphabetical
@@ -61,16 +61,14 @@ function App() {
     }
   };
 
-  // handles results of videos found according to search
+  // handles results of videos found according to search passed in
   const handleSearchedData = (data, search) => {
     if(search.length < 1) {
       console.log('nothing to search')
       setFilteredData([]);
       return
     }
-    // setFilteredData([...data.filter(video =>
-    //   video.clip.name.toLowerCase().includes(search.toLowerCase())
-    // )]);
+
     let found = [...data.filter(video => (
       video.clip.name.toLowerCase().includes(search.toLowerCase())
     ))];
@@ -85,8 +83,6 @@ function App() {
   
   useEffect(() => {
     if(currentSearch.length > 0) {
-      console.log('searching...', currentSearch)
-      console.log(jsonData)
       handleSearchedData(jsonData, currentSearch);
     } else {
       setJsonData(handleSort(jsonData));
@@ -96,8 +92,6 @@ function App() {
   useEffect(() => {
     handleFilteredData();
   }, [sort]);
-
-  console.log('filtered: ', filteredData);
   
   return (
     <Router hisotry={history}>
