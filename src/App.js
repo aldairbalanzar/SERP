@@ -64,7 +64,6 @@ function App() {
   // handles results of videos found according to search passed in
   const handleSearchedData = (data, search) => {
     if(search.length < 1) {
-      console.log('nothing to search')
       setFilteredData([]);
       return
     }
