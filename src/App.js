@@ -17,7 +17,7 @@ function App() {
   const [currentSearch, setCurrentSearch] = useState('');
   const [sort, setSort] = useState(0);
   const [filteredData, setFilteredData] = useState([]);
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   // hanldes how videos are sorted, defaults to alphabetical
   const handleSort = (data) => {
