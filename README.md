@@ -8,5 +8,4 @@ Run command ```npm i``` to install all project dependancies and then ```npm star
 
 ### Live link
 
-[Live Link To Project](serp.vercel.app)
-
+[Live Link To Project](https://serp.vercel.app/)
