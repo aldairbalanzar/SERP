@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import animations from './data/animation.json';
 import examples from './data/example.json';
 import travels from './data/travel.json';
-import Nav from './components/Nav';
+import Reset from './components/Reset';
 import SearchBar from './components/SearchBar';
 import CardList from './components/CardList';
 import Filters from './components/Filters';
@@ -17,6 +17,7 @@ function App() {
   const [currentSearch, setCurrentSearch] = useState('');
   const [sort, setSort] = useState(0);
   const [filteredData, setFilteredData] = useState([]);
+  const [isNavOpen, setIsNavOpen] = useState(true);
 
   // hanldes how videos are sorted, defaults to alphabetical
   const handleSort = (data) => {
@@ -95,10 +96,6 @@ function App() {
   return (
     <Router hisotry={history}>
       <div className="App">
-        <Nav 
-        handleSearchedData={handleSearchedData}
-        jsonData={jsonData}
-        />
         <SearchBar 
         jsonData={jsonData} 
         search={search}
@@ -112,6 +109,10 @@ function App() {
         <Filters
         sort={sort}
         setSort={setSort}
+        handleSearchedData={handleSearchedData}
+        jsonData={jsonData}
+        isNavOpen={isNavOpen}
+        setIsNavOpen={setIsNavOpen}
         />
 
         <CardList 

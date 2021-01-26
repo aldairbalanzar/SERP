@@ -93,24 +93,102 @@ table {
   }
 }
 
-.navigator {
-  width: 100%;
-  background-color: #9377d6;
+.nav {
   position: fixed;
+}
+.hamburger-times {
+  width: 100%;
+  padding: 3% 0 6%;
+  background-color: rgb(234, 234, 243);
+}
+.filter-navigator-open {
+  background-color: rgb(234, 234, 243);
+  border-radius: 5px;
+  width: 100%;
+  height: 512px;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
-  padding: 8px 0 8px;
-  box-shadow: 0px 4px 8px rgba(34, 34, 34, 0.7);
-  z-index: 1; 
+  padding: 0 3%;
 }
-.links-container {
-  padding: 0 5% 0 0;
+.filter-navigator-closed {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
 }
-.link {
-  color: ghostwhite;
+.icon-container-open {
+  width: 100%;
+  height: 512px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-container-closed {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+.form-filter {
+  width: 100%;
+  height: 512px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3% 0 0;
   font-size: 1.4rem;
 }
+.sort-input {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.reset-container {
+  width: 100%;
+  padding: 16% 14% 10%;
+}
+.reset-btn {
+  width: 100%;
+  color: ghostwhite;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #be305b;
+  padding: 4% 5%;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    position: static;
+  }
+  .hamburger-times {
+    background-color: white;
+    padding: 24% 0 6%;
+  }
+  .filter-navigator-open {
+    width: 10%;
+    background-color: white;
+  }
+  .filter-navigator-closed {
+    width: 10%;
+  }
+  .icon-container-open {
+    width: 100%;
+  }
+  .form-filter {
+    width: 100%;
+    height: 512px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3% 0 0;
+    font-size: 1.4rem;
+  }
+  .sort-input {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
 .link:hover {
   cursor: pointer;
   color: gold;
@@ -122,10 +200,10 @@ table {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 10% 0 0;
+  margin: 14% 0 0;
 }
 .searchbar {
-  width: 70%;
+  width: 60%;
   height: 36px;
   border: none;
   background-color: rgb(231, 231, 231);
@@ -224,6 +302,7 @@ input:focus {
 }
 .card-data {
   width: 100%;
+  padding: 0 0 3%;
 }
 @media (min-width: 768px) {
   .card-list {
@@ -239,7 +318,7 @@ input:focus {
 }
 @media (min-width: 1024px) {
   .card-list {
-    width: 86%;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -283,25 +362,3 @@ input:focus {
     text-align: center;
   }
 }
-
-.form-filter {
-  display: none;
-}
-@media (min-width: 1024px) {
-  .form-filter {
-    width: 10%;
-    height: 1024px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 3% 0 0;
-    font-size: 1.4rem;
-  }
-  .sort-input {
-    width: 100%;
-    padding: 5% 0;
-  }
-}
-
-
