@@ -127,12 +127,29 @@ table {
 .searchbar {
   width: 80%;
   height: 36px;
-  border: 2px solid grey;
-  border-radius: 7px;
+  border: none;
+  background-color: rgb(231, 231, 231);
+  border-radius: 7px 0 0 7px;
   font-size: 1.6rem;
   padding: 0 1%;
 }
 input:focus {
+  outline: none;
+}
+.submit-btn {
+  border-radius: 0 7px 7px 0;
+  border: none;
+  background-color: #30bea0;
+  color: ghostwhite;
+  font-size: 1.4rem;
+  transition: .25s ease;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: #5ad3b9;
+  transition: .175s ease;
+}
+.submit-btn:focus {
   outline: none;
 }
 .search-results-count {
@@ -253,7 +270,7 @@ input:focus {
   }
   
   .card-container:hover .card-img {
-    opacity: 0.6;
+    opacity: 0.75;
     transition: .25s ease;
   }
   
@@ -263,7 +280,7 @@ input:focus {
   
   .text {
     border-radius: 7px 7px 0 0;
-    background-color: #000000;
+    background-color: #000000da;
     color: white;
     font-size: .8rem;
     padding: 16px 32px;
