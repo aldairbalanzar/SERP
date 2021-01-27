@@ -238,7 +238,8 @@ input:focus {
 @media(min-width: 1024px) {
   .form-search {
     justify-content: flex-start;
-    margin: 4% 0 0;
+    margin: 0;
+    padding: 3% 3% 2%;
   }
   .searchbar {
     width: 36%;
