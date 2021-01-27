@@ -4,7 +4,6 @@ function Card({ video }) {
     const { clip } = video;
     const { name, description, duration, pictures, user, stats, created_time } = clip;
     let date = created_time.split('-')
-    console.log(date)
 
     return (
         <div className='card-container'>
