@@ -4,7 +4,7 @@ This project is to show off the mechanics of a video selector UI, how a user mig
 
 ### Installation and startup
 
-Run command ```npm i``` to install all project dependancies and then ```npm start``` to run application in browser.
+Run command ```npm i``` to install all project dependencies and then ```npm start``` to run application in browser.
 
 ### Live link
 
