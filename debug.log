@@ -1,2 +1,4 @@
 [0124/133524.497:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [0126/093904.786:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0127/001121.227:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0127/014604.910:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\aldai\AppData\Roaming\Cypress\cy\production\browsers\chrome-stable\interactive\Crashpad\attachments\706ee306-8044-462e-bd00-1b59b2e06b9b: The system cannot find the path specified. (0x3)
