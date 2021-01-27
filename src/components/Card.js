@@ -19,7 +19,7 @@ function Card({ video }) {
             <h3 className="card-username">{user.name}</h3>
             <div className="card-stats-container">
                 <h4 className="card-data">{duration} min. | Views: {stats.plays ? stats.plays : 0}</h4>
-                <h4 className="card-data">Uploaded: {`${date[1]}/${date[0]}/${date[2].slice(0, 2)}`}</h4>
+                <h4 className="card-data">Uploaded: {`${date[2].slice(0, 2)}/${date[1]}/${date[0]}}`}</h4>
 
             </div>
         </div>
